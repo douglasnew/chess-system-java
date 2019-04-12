@@ -7,22 +7,34 @@
  * language in any way or for any other purposes whatsoever without the prior
  * written consent of FH.
  */
-package application;
+package boardgame;
 
-import boardgame.Board;
 
 /**
  * @author FH - donascimento
  *
  */
-public class Program {
-
+public class Piece {
+    
+    protected Position position;
+    private Board board;
+    
     /**
-     * @param args
+     * Create a new instance of Piece
+     * @param board
      */
-    public static void main(String[] args) {
-        
-        Board board = new Board(8,8);
+    public Piece(Board board) {
+        this.board = board;
+        position = null;
+    }
+    
+    /**
+     * Retrieve the value of board.
+     *
+     * @return the board
+     */
+    protected Board getBoard() {
+        return board;
     }
 
 }
